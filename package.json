@@ -1,6 +1,6 @@
 {
   "name": "svelte-ktippy",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Svelte Tooltip Component based on tippy.js of tippy version 6",
   "main": "index.js",
   "scripts": {
@@ -21,5 +21,12 @@
   },
   "dependencies": {
     "tippy.js": "^6.3.1"
-  }
+  },
+  "keywords": [
+    "svelte",
+    "tooltip",
+    "popover",
+    "tippy",
+    "tippy.js"
+  ]
 }
