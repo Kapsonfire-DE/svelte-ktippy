@@ -12,7 +12,7 @@
     export let maxWidth = 'calc(100vw - 10px)';
     export let interactive = false;
     export let arrow = false;
-    export let getReferenceClientRect: null;
+    export let getReferenceClientRect = null;
     let tooltipNode;
     let instance = null;
 
