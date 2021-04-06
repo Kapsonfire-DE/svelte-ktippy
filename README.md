@@ -21,6 +21,23 @@ $ yarn add svelte-ktippy
 ```
 
 ## How to use
+### Prepare rollup environment variables
+tippy.js makes use of the NODE_ENV on default. 
+To remove it, we use @rollup/plugin-replace
+
+```npm i @rollup/plugin-replace```
+
+Edit your ```rollup.config.js```
+
+Add: ```import replace from '@rollup/plugin-replace';``` to the head
+
+Add to the plugins array:
+```javascript
+replace({
+    'process.env.NODE_ENV': JSON.stringify('production')
+})
+```
+
 
 ### Example
 
@@ -45,3 +62,7 @@ $ yarn add svelte-ktippy
   Hover me
 </div>
 ```
+
+
+## FAQ
+#
