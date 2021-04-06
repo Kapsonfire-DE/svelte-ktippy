@@ -16,8 +16,10 @@
     "url": "https://github.com/Kapsonfire-DE/svelte-ktippy/issues"
   },
   "homepage": "https://github.com/Kapsonfire-DE/svelte-ktippy#readme",
+  "dependencies": {
+    "rollup-plugin-replace": "^2.2.0"
+  },
   "devDependencies": {
-    "rollup-plugin-replace": "^2.2.0",
     "svelte": "^3.37.0",
     "tippy.js": "^6.3.1"
   }
