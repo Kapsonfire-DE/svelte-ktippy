@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/Kapsonfire-DE/svelte-ktippy#readme",
   "devDependencies": {
-    "svelte": "^3.37.0",
+    "svelte": "^3.37.0"
+  },
+  "dependencies": {
     "tippy.js": "^6.3.1"
   }
 }
