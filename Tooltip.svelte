@@ -1,18 +1,18 @@
 <svelte:options accessors={true}/>
-<script lang="ts">
+<script>
     import tippy from "tippy.js/dist/tippy-bundle.umd.js";
     import {onMount, onDestroy} from "svelte";
 
     export let component;
     export let props = {};
     export let anchorNode;
-    export let placement: string = 'auto'
-    export let appendTo: string | HTMLElement = anchorNode;
-    export let followCursor: boolean = false;
-    export let maxWidth: string | number = 'calc(100vw - 10px)';
-    export let interactive: boolean = false;
-    export let arrow: boolean = false;
-    export let getReferenceClientRect: Function|null = null;
+    export let placement = 'auto'
+    export let appendTo = anchorNode;
+    export let followCursor = false;
+    export let maxWidth = 'calc(100vw - 10px)';
+    export let interactive = false;
+    export let arrow = false;
+    export let getReferenceClientRect: null;
     let tooltipNode;
     let instance = null;
 
