@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "module": "esnext",
+  },
+  "include": ["./**/*"],
+  "exclude": ["node_modules/*"]
+}

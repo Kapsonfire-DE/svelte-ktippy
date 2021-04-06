@@ -1,0 +1,23 @@
+{
+  "name": "svelte-ktippy",
+  "version": "1.0.0",
+  "description": "Svelte Tooltip Component based on tippy6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kapsonfire-DE/svelte-ktippy.git"
+  },
+  "author": "Dennis Kaspar <admin@kapsonfire.de>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/Kapsonfire-DE/svelte-ktippy/issues"
+  },
+  "homepage": "https://github.com/Kapsonfire-DE/svelte-ktippy#readme",
+  "dependencies": {
+    "svelte": "^3.37.0",
+    "tippy.js": "^6.3.1"
+  }
+}
