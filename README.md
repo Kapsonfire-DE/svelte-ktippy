@@ -40,6 +40,7 @@ replace({
 
 
 ### Example
+[![Edit svelte-ktippy](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/svelte-ktippy-i5unt?file=/App.svelte)
 
 ```html
 <script>
