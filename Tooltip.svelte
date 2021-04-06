@@ -12,6 +12,7 @@
     export let maxWidth: string | number = 'calc(100vw - 10px)';
     export let interactive: boolean = false;
     export let arrow: boolean = false;
+    export let getReferenceClientRect: Function|null = null;
     let tooltipNode;
     let instance = null;
 
@@ -28,6 +29,7 @@
             arrow,
             followCursor,
             interactiveBorder: 0,
+            getReferenceClientRect,
             popperOptions: {
                 strategy: 'fixed'
             }
