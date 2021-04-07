@@ -1,7 +1,7 @@
 <svelte:options accessors={true}/>
 <script>
     import tippy from "tippy.js/dist/tippy-bundle.umd.js";
-    import {onMount, onDestroy} from "svelte";
+    import {onMount as _onMount, onDestroy as _onDestroy} from "svelte";
 
     export let component;
     export let props = {};
@@ -13,13 +13,17 @@
     export let interactive = false;
     export let arrow = false;
     export let getReferenceClientRect = null;
+    export let onMount = undefined;
+    export let onShow = undefined;
+    export let onShown = undefined;
+    export let animation = 'fade';
     let tooltipNode;
     let instance = null;
 
-    onDestroy(() => {
+    _onDestroy(() => {
         instance.destroy();
     });
-    onMount(() => {
+    _onMount(() => {
         instance = tippy(anchorNode, {
             content: tooltipNode,
             appendTo: typeof appendTo === 'string' ? document.querySelector(appendTo) : appendTo,
@@ -30,6 +34,10 @@
             followCursor,
             interactiveBorder: 0,
             getReferenceClientRect,
+            animation,
+            onMount,
+            onShown,
+            onShow,
             popperOptions: {
                 strategy: 'fixed'
             }
