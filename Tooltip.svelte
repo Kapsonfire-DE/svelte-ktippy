@@ -16,7 +16,22 @@
     export let onMount = undefined;
     export let onShow = undefined;
     export let onShown = undefined;
+    export let onTrigger = undefined;
+    export let onUntrigger = undefined;
+    export let onHide = undefined;
+    export let onHidden = undefined;
+    export let onDestroy = undefined;
+    export let onCreate = undefined;
+    export let onClickOutside = undefined;
+    export let onBeforeUpdate = undefined;
+    export let onAfterUpdate = undefined;
+    export let offset = [0, 10];
+    export let interactiveDebounce = 0;
+    export let hideOnClick = true;
     export let animation = 'fade';
+    export let interactiveBorder = 0;
+    export let zIndex = 9999;
+    export let role = 'tooltip';
     let tooltipNode;
     let instance = null;
 
@@ -32,12 +47,26 @@
             interactive,
             arrow,
             followCursor,
-            interactiveBorder: 0,
+            interactiveBorder,
             getReferenceClientRect,
             animation,
             onMount,
             onShown,
             onShow,
+            zIndex,
+            role,
+            hideOnClick,
+            interactiveDebounce,
+            offset,
+            onAfterUpdate,
+            onBeforeUpdate,
+            onClickOutside,
+            onCreate,
+            onDestroy,
+            onHidden,
+            onHide,
+            onUntrigger,
+            onTrigger,
             popperOptions: {
                 strategy: 'fixed'
             }
