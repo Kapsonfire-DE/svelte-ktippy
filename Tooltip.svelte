@@ -32,6 +32,13 @@
     export let interactiveBorder = 0;
     export let zIndex = 9999;
     export let role = 'tooltip';
+    export let animateFill = false;
+    export let aria = {
+        // `null` when interactive: true, otherwise "describedby"
+        content: 'auto',
+        // matches `interactive` boolean
+        expanded: 'auto',
+    };
     let tooltipNode;
     let instance = null;
 
@@ -44,6 +51,8 @@
             appendTo: typeof appendTo === 'string' ? document.querySelector(appendTo) : appendTo,
             placement,
             maxWidth,
+            aria,
+            animateFill,
             interactive,
             arrow,
             followCursor,
@@ -82,15 +91,16 @@
 
 
 <style>
-  :global(.tippy-box) {
-    background-color: transparent;
-    backdrop-filter: blur(4px);
-    color: #fff;
-    padding: 0;
-    margin: 0;
-  }
-  :global(.tippy-content) {
-      padding: 0;
-      margin: 0;
-  }
+    :global(.tippy-box) {
+        background-color: transparent;
+        backdrop-filter: blur(4px);
+        color: #fff;
+        padding: 0;
+        margin: 0;
+    }
+
+    :global(.tippy-content) {
+        padding: 0;
+        margin: 0;
+    }
 </style>
