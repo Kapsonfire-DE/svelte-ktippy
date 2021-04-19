@@ -1,6 +1,6 @@
 <svelte:options accessors={true}/>
 <script>
-    import tippy from "tippy.js/dist/tippy-bundle.umd.js";
+    import tippy, {followCursor as pFollowCursor, sticky as pSticky, animateFill as pAnimateFill} from "tippy.js";
     import {onMount as _onMount, onDestroy as _onDestroy} from "svelte";
 
     export let component;
@@ -47,6 +47,7 @@
     });
     _onMount(() => {
         instance = tippy(anchorNode, {
+            plugins: [pFollowCursor, pSticky, pAnimateFill],
             content: tooltipNode,
             appendTo: typeof appendTo === 'string' ? document.querySelector(appendTo) : appendTo,
             placement,
