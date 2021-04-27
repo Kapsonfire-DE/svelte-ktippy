@@ -3,6 +3,7 @@
     import tippy, {followCursor as pFollowCursor, sticky as pSticky, animateFill as pAnimateFill} from "tippy.js";
     import {onMount as _onMount, onDestroy as _onDestroy} from "svelte";
 
+    export let duration = [300,250];
     export let delay = null;
     export let component;
     export let props = {};
@@ -63,6 +64,7 @@
             getReferenceClientRect,
             animation,
             onMount,
+            duration,
             onShown,
             onShow,
             zIndex,
