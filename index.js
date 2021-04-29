@@ -14,7 +14,7 @@ import Tooltip from "./Tooltip.svelte";
 export function popover(anchorNode, props) {
     if (props === null)
         return;
-    props = __assign({ appendTo: anchorNode, placement: 'top-start', interactive: true, followCursor: false, arrow: false }, props);
+    props = __assign({ appendTo: anchorNode, interactive: true, followCursor: false, arrow: false }, props);
     return tooltip(anchorNode, props);
 }
 export function tooltip(anchorNode, props) {

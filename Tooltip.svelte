@@ -1,14 +1,15 @@
 <svelte:options accessors={true}/>
 <script>
-    import tippy, {followCursor as pFollowCursor, sticky as pSticky, animateFill as pAnimateFill} from "tippy.js";
+    import tippy, {followCursor as pFollowCursor, sticky as pSticky, animateFill as pAnimateFill, inlinePositioning as pInlinePositioning} from "tippy.js";
     import {onMount as _onMount, onDestroy as _onDestroy} from "svelte";
     import "tippy.js/dist/tippy.css";
     export let duration = [300,250];
     export let delay = null;
+    export let inlinePositioning = false;
     export let component;
     export let props = {};
     export let anchorNode;
-    export let placement = 'auto'
+    export let placement = 'top'
     export let appendTo = anchorNode;
     export let followCursor = false;
     export let maxWidth = 'calc(100vw - 10px)';
@@ -49,7 +50,7 @@
     });
     _onMount(() => {
         instance = tippy(anchorNode, {
-            plugins: [pFollowCursor, pSticky, pAnimateFill],
+            plugins: [pFollowCursor, pSticky, pAnimateFill, pInlinePositioning],
             content: tooltipNode,
             appendTo: typeof appendTo === 'string' ? document.querySelector(appendTo) : appendTo,
             placement,

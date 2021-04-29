@@ -6,7 +6,6 @@ export function popover(anchorNode, props) {
     if(props === null) return;
     props = {
         appendTo: anchorNode,
-        placement: 'top-start',
         interactive: true,
         followCursor: false,
         arrow: false,
