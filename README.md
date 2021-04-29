@@ -3,7 +3,7 @@
 ![npm](https://img.shields.io/npm/v/svelte-ktippy)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/svelte-ktippy)
 ![npm](https://img.shields.io/npm/dw/svelte-ktippy)
-
+![npm](https://img.shields.io/npm/dt/svelte-ktippy)
 ![GitHub](https://img.shields.io/github/license/Kapsonfire-DE/svelte-ktippy)
 
 Tippy.js for [Svelte](https://svelte.dev/).

@@ -8,6 +8,7 @@
     export let inlinePositioning = false;
     export let component;
     export let props = {};
+    export let sticky = false;
     export let anchorNode;
     export let placement = 'top'
     export let appendTo = anchorNode;
@@ -26,6 +27,8 @@
     export let onDestroy = undefined;
     export let onCreate = undefined;
     export let onClickOutside = undefined;
+    export let trigger = 'mouseenter focus';
+    export let triggerTarget = null;
     export let onBeforeUpdate = undefined;
     export let onAfterUpdate = undefined;
     export let offset = [0, 10];
@@ -36,6 +39,7 @@
     export let zIndex = 9999;
     export let role = 'tooltip';
     export let animateFill = false;
+    export let showOnCreate = false;
     export let aria = {
         // `null` when interactive: true, otherwise "describedby"
         content: 'auto',
@@ -50,6 +54,7 @@
     });
     _onMount(() => {
         instance = tippy(anchorNode, {
+            showOnCreate,
             plugins: [pFollowCursor, pSticky, pAnimateFill, pInlinePositioning],
             content: tooltipNode,
             appendTo: typeof appendTo === 'string' ? document.querySelector(appendTo) : appendTo,
@@ -57,6 +62,9 @@
             maxWidth,
             aria,
             delay,
+            sticky,
+            trigger,
+            triggerTarget,
             animateFill,
             interactive,
             arrow,
