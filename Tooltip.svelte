@@ -27,6 +27,7 @@
     export let onDestroy = undefined;
     export let onCreate = undefined;
     export let onClickOutside = undefined;
+    export let theme = undefined;
     export let trigger = 'mouseenter focus';
     export let triggerTarget = null;
     export let onBeforeUpdate = undefined;
@@ -63,6 +64,7 @@
             aria,
             delay,
             sticky,
+            theme,
             trigger,
             triggerTarget,
             animateFill,
