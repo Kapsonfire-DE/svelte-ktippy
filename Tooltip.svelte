@@ -102,7 +102,7 @@
 </script>
 
 <div bind:this={tooltipNode}>
-    <svelte:component this={component} {...props}/>
+    <svelte:component this={component} {...{anchorNode, ...props}}/>
 </div>
 
 
