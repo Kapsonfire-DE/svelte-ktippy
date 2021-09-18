@@ -34,6 +34,7 @@ export interface KTippyProps {
     placement?: "top"|"top-start"|"top-end"|"right"|"right-start"|"right-end"|"bottom"|"bottom-start"|"bottom-end"|"left"|"left-start"|"left-end"|"auto"|"auto-start"|"auto-end";
     showOnCreate?: boolean;
     sticky?: boolean|"reference"|"popper";
+    theme?:string;
     trigger?:string;
     triggerTarget?:Element|Element[];
     zIndex?: number;
