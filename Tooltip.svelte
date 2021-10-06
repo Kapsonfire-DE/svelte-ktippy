@@ -3,6 +3,7 @@
     import tippy, {followCursor as pFollowCursor, sticky as pSticky, animateFill as pAnimateFill, inlinePositioning as pInlinePositioning} from "tippy.js";
     import {onMount as _onMount, onDestroy as _onDestroy} from "svelte";
     import "tippy.js/dist/tippy.css";
+    import {tippyStore} from "./tippyStore";
     export let duration = [300,250];
     export let delay = null;
     export let inlinePositioning = false;
@@ -52,6 +53,10 @@
 
     _onDestroy(() => {
         instance.destroy();
+        if(anchorNode.hasAttribute('id')) {
+            let id = anchorNode.getAttribute('id');
+            delete $tippyStore[id];
+        }
     });
     _onMount(() => {
         instance = tippy(anchorNode, {
@@ -96,6 +101,10 @@
                 strategy: 'fixed'
             }
         });
+        if(anchorNode.hasAttribute('id')) {
+            let id = anchorNode.getAttribute('id');
+            $tippyStore[id] = instance;
+        }
     });
 
 

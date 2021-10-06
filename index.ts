@@ -1,6 +1,7 @@
 // @ts-ignore
 import Tooltip from "./Tooltip.svelte";
 import {SvelteComponent} from "svelte";
+import {tippyStore} from "./tippyStore";
 
 export interface KTippyProps {
     animateFill?:boolean;
