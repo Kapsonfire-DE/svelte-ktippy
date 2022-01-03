@@ -38,6 +38,9 @@ export function tooltip(anchorNode, props) {
             hideEvents.forEach(function (event) {
                 return anchorNode.removeEventListener(event, hide);
             });
+        },
+        update: function (props) {
+            tooltipComponent.props = __assign(__assign({}, tooltipComponent.props), props.props);
         }
     };
 }

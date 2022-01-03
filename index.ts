@@ -80,6 +80,9 @@ export function tooltip(anchorNode, props: KTippyProps) {
             hideEvents.forEach((event) =>
                 anchorNode.removeEventListener(event, hide)
             );
+        },
+        update(props) {
+            tooltipComponent.props = { ...tooltipComponent.props, ...props.props};
         }
     };
 }
